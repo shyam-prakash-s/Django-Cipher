@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ci-Potato</title>
+</head>
+<body style="text-align: center; background-color: azure; font-size: 1.5em;">
+    <button style="height: 30px; width: 100px;font-size: 0.5em;text-align: center; color: red; margin-top: 15%" id="copy-button">Copy</button><br>
+    <textarea id="copy-text" style="font-size: 1.5em; margin-top: 10px" name="" id="" cols="50" rows="5">{{msg}}</textarea><br>
+    <a href="">    <button style="height: 30px; width: 100px;font-size: 0.5em;text-align: center; color: Blue; margin-top: 10px">Home</button></a>
+
+<script>
+var copyText = document.getElementById("copy-text");
+var copyButton = document.getElementById("copy-button");
+
+// Add an event listener for when the button is clicked
+copyButton.addEventListener("click", function() {
+  // Select all the text inside the div element
+  copyText.select();
+  // Execute the copy command
+  document.execCommand("copy");
+  // Alert that the text has been copied
+//   alert("Text copied!");
+});
+</script>
+
+</body>
+</html>
